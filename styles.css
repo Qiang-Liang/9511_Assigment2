@@ -262,9 +262,10 @@ body {
 
 /* Service Pages Layout */
 .service-page {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: var(--spacing-xl) var(--spacing-md);
+    width: 100%;
 }
 
 .page-header {
