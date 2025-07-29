@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsidy Application - Login | Government Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-page">
+        <a href="javascript:goHome()" class="back-button">
+            ← Back to Home
+        </a>
+
+        <div class="page-header">
+            <h2 class="page-title">Subsidy Application</h2>
+            <p class="page-subtitle">Step 1 of 3: Account Login</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-step active">1</div>
+            <div class="progress-step">2</div>
+            <div class="progress-step">3</div>
+        </div>
+
+        <div class="form-section">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">🔐</div>
+                <h3>Secure Login Required</h3>
+                <p style="color: var(--text-secondary);">
+                    Please log in to your government account to continue with your subsidy application. 
+                    This ensures the security of your personal information and application.
+                </p>
+            </div>
+        </div>
+
+        <form class="login-form" data-next-step="subsidy-application-2">
+            <div class="form-section">
+                <h3>Login Credentials</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="username">Username or Email *</label>
+                    <input type="text" id="username" name="username" class="form-input" required 
+                           placeholder="Enter your username or email address">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password">Password *</label>
+                    <input type="password" id="password" name="password" class="form-input" required 
+                           placeholder="Enter your password">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="rememberMe" value="yes">
+                        Remember me on this device
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Two-Factor Authentication</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    For enhanced security, please complete two-factor authentication.
+                </p>
+                
+                <div class="form-group">
+                    <label class="form-label" for="authMethod">Authentication Method *</label>
+                    <select id="authMethod" name="authMethod" class="form-select" required>
+                        <option value="">Select authentication method</option>
+                        <option value="sms">SMS Text Message</option>
+                        <option value="email">Email Verification</option>
+                        <option value="app">Authenticator App</option>
+                        <option value="security-key">Security Key</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="phoneGroup" style="display: none;">
+                    <label class="form-label" for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" 
+                           placeholder="(XXX) XXX-XXXX">
+                </div>
+
+                <div class="form-group" id="emailGroup" style="display: none;">
+                    <label class="form-label" for="emailAddress">Email Address</label>
+                    <input type="email" id="emailAddress" name="emailAddress" class="form-input" 
+                           placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group" id="codeGroup" style="display: none;">
+                    <label class="form-label" for="authCode">Verification Code</label>
+                    <input type="text" id="authCode" name="authCode" class="form-input" 
+                           placeholder="Enter 6-digit code" maxlength="6">
+                    <button type="button" class="btn btn-secondary" style="margin-top: 0.5rem;" onclick="sendVerificationCode()">
+                        Send Code
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="card" style="background-color: #dbeafe; border-color: #3b82f6;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">🛡️ Account Security</h4>
+                    <ul style="margin: 0; padding-left: 1.5rem; color: #1e40af;">
+                        <li>Your account is protected with advanced encryption</li>
+                        <li>Two-factor authentication adds an extra layer of security</li>
+                        <li>We never store or share your login credentials</li>
+                        <li>Session timeout after 30 minutes of inactivity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" onclick="goHome()">Cancel</button>
+                <button type="submit" class="btn btn-primary">Login & Continue</button>
+            </div>
+        </form>
+
+        <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background-color: var(--surface-color); border-radius: var(--radius-lg);">
+            <h4 style="margin-bottom: 1rem;">Need Help Logging In?</h4>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <a href="#forgot-password" style="color: var(--primary-color); text-decoration: none;">
+                    🔑 Forgot Password?
+                </a>
+                <a href="#create-account" style="color: var(--primary-color); text-decoration: none;">
+                    👤 Create New Account
+                </a>
+                <a href="#help" style="color: var(--primary-color); text-decoration: none;">
+                    ❓ Login Help
+                </a>
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                If you continue to experience issues, please contact support at 
+                <strong style="color: var(--primary-color);">1-800-GOV-HELP</strong>
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar(1);
+            
+            // Authentication method handling
+            const authMethod = document.getElementById('authMethod');
+            const phoneGroup = document.getElementById('phoneGroup');
+            const emailGroup = document.getElementById('emailGroup');
+            const codeGroup = document.getElementById('codeGroup');
+            
+            authMethod.addEventListener('change', function() {
+                // Hide all groups first
+                phoneGroup.style.display = 'none';
+                emailGroup.style.display = 'none';
+                codeGroup.style.display = 'none';
+                
+                // Show relevant group based on selection
+                switch(this.value) {
+                    case 'sms':
+                        phoneGroup.style.display = 'block';
+                        codeGroup.style.display = 'block';
+                        break;
+                    case 'email':
+                        emailGroup.style.display = 'block';
+                        codeGroup.style.display = 'block';
+                        break;
+                    case 'app':
+                        codeGroup.style.display = 'block';
+                        break;
+                    case 'security-key':
+                        // Security key doesn't need additional fields
+                        break;
+                }
+            });
+        });
+        
+        function sendVerificationCode() {
+            const authMethod = document.getElementById('authMethod').value;
+            let message = '';
+            
+            switch(authMethod) {
+                case 'sms':
+                    message = 'Verification code sent to your phone';
+                    break;
+                case 'email':
+                    message = 'Verification code sent to your email';
+                    break;
+                case 'app':
+                    message = 'Please check your authenticator app';
+                    break;
+                default:
+                    message = 'Verification code sent';
+            }
+            
+            showNotification(message);
+        }
+    </script>
+</body>
+</html> 

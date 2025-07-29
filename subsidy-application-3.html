@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsidy Application - Confirmation | Government Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-page">
+        <a href="javascript:goToPreviousStep('subsidy-application', 3)" class="back-button">
+            ← Back to Form
+        </a>
+
+        <div class="page-header">
+            <h2 class="page-title">Subsidy Application</h2>
+            <p class="page-subtitle">Step 3 of 3: Email Confirmation Preview</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-step completed">1</div>
+            <div class="progress-step completed">2</div>
+            <div class="progress-step active">3</div>
+        </div>
+
+        <div class="form-section">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">📧</div>
+                <h3>Email Confirmation Preview</h3>
+                <p style="color: var(--text-secondary);">
+                    Please review the confirmation email that will be sent to your registered email address. 
+                    You can make changes by going back to the previous step.
+                </p>
+            </div>
+        </div>
+
+        <div class="card" style="max-width: 600px; margin: 0 auto 2rem auto; border: 2px solid var(--border-color);">
+            <div style="background-color: var(--primary-color); color: white; padding: 1rem; margin: -2rem -2rem 2rem -2rem; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+                <h4 style="margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>🏛️</span>
+                    Government Services Portal
+                </h4>
+            </div>
+
+            <div class="email-content">
+                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    Subsidy Application Received - Confirmation #SA2024-456789
+                </h4>
+
+                <p style="margin-bottom: 1rem;">Dear <strong>[Applicant Name]</strong>,</p>
+
+                <p style="margin-bottom: 1rem;">
+                    Thank you for submitting your subsidy application through the Government Services Portal. 
+                    We have successfully received your application and it is now under review.
+                </p>
+
+                <div style="background-color: var(--surface-color); padding: 1rem; border-radius: var(--radius-md); margin: 1rem 0;">
+                    <h5 style="margin-bottom: 0.5rem; color: var(--primary-color);">Application Summary:</h5>
+                    <div style="display: grid; gap: 0.25rem; font-size: 0.9em;">
+                        <div><strong>Application ID:</strong> SA2024-456789</div>
+                        <div><strong>Subsidy Type:</strong> Housing Assistance</div>
+                        <div><strong>Requested Amount:</strong> $2,500.00</div>
+                        <div><strong>Priority Level:</strong> Priority (14-21 days)</div>
+                        <div><strong>Submission Date:</strong> <span id="submissionDate"></span></div>
+                        <div><strong>Status:</strong> <span style="color: #f59e0b;">Under Review</span></div>
+                    </div>
+                </div>
+
+                <h5 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary-color);">Next Steps:</h5>
+                <ol style="margin-left: 1.5rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.5rem;">
+                        <strong>Document Verification (1-3 business days):</strong><br>
+                        Our team will review and verify the documents you submitted.
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                        <strong>Eligibility Assessment (3-7 business days):</strong><br>
+                        We will assess your eligibility based on income, family size, and current circumstances.
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                        <strong>Review Committee Evaluation (5-10 business days):</strong><br>
+                        Your application will be reviewed by our subsidy committee for final approval.
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                        <strong>Final Decision (14-21 business days):</strong><br>
+                        You will receive notification of the final decision via email and regular mail.
+                    </li>
+                </ol>
+
+                <div style="background-color: #dbeafe; padding: 1rem; border-radius: var(--radius-md); margin: 1.5rem 0;">
+                    <h5 style="margin-bottom: 0.5rem; color: #1e40af;">📋 Important Information:</h5>
+                    <ul style="margin: 0; padding-left: 1.5rem; color: #1e40af; font-size: 0.9em;">
+                        <li>Keep this confirmation email for your records</li>
+                        <li>Your application reference number is: <strong>SA2024-456789</strong></li>
+                        <li>You can check your application status online anytime</li>
+                        <li>Additional documents may be requested during the review process</li>
+                        <li>Processing times may vary based on application volume</li>
+                    </ul>
+                </div>
+
+                <h5 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary-color);">How to Track Your Application:</h5>
+                <div style="background-color: var(--surface-color); padding: 1rem; border-radius: var(--radius-md);">
+                    <p style="margin: 0; font-size: 0.9em; color: var(--text-secondary);">
+                        Visit our website at <strong style="color: var(--primary-color);">govservices.gov/track</strong> 
+                        and enter your reference number: <strong style="color: var(--primary-color);">SA2024-456789</strong>
+                    </p>
+                </div>
+
+                <h5 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary-color);">Contact Information:</h5>
+                <div style="display: grid; gap: 0.5rem; font-size: 0.9em; color: var(--text-secondary);">
+                    <div><strong>Subsidy Department:</strong> (555) 123-4567</div>
+                    <div><strong>Email Support:</strong> subsidies@govservices.gov</div>
+                    <div><strong>Office Hours:</strong> Monday - Friday, 8:00 AM - 6:00 PM</div>
+                    <div><strong>Emergency Line:</strong> (555) 999-HELP (available 24/7)</div>
+                </div>
+
+                <p style="margin-top: 2rem; margin-bottom: 1rem;">
+                    We appreciate your patience during the review process. If you have any questions or need to update your information, 
+                    please don't hesitate to contact us using the information provided above.
+                </p>
+
+                <p style="margin-bottom: 2rem;">
+                    Sincerely,<br>
+                    <strong>Government Services Portal Team</strong><br>
+                    Department of Social Services
+                </p>
+
+                <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; font-size: 0.8em; color: var(--text-secondary);">
+                    <p style="margin: 0;">
+                        This is an automated message. Please do not reply directly to this email. 
+                        For assistance, use the contact information provided above.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="card" style="background-color: #f0fdf4; border-color: #22c55e;">
+                <h4 style="color: #15803d; margin-bottom: 0.5rem;">✅ Ready to Submit</h4>
+                <p style="color: #15803d; margin: 0;">
+                    Your application is complete and ready for submission. Once submitted, you cannot make changes to this application. 
+                    A copy of this confirmation email will be sent to your registered email address.
+                </p>
+            </div>
+        </div>
+
+        <form data-next-step="complete">
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" onclick="goToPreviousStep('subsidy-application', 3)">
+                    Back to Edit
+                </button>
+                <button type="submit" class="btn btn-primary" onclick="submitApplication(event)">
+                    Submit Application
+                </button>
+            </div>
+        </form>
+
+        <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background-color: var(--surface-color); border-radius: var(--radius-lg);">
+            <h4 style="margin-bottom: 1rem;">Application Support</h4>
+            <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                Need help with your application or have questions about the subsidy process?
+            </p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div>
+                    <strong>Phone Support:</strong><br>
+                    <span style="color: var(--primary-color);">📞 1-800-SUB-HELP</span>
+                </div>
+                <div>
+                    <strong>Live Chat:</strong><br>
+                    <span style="color: var(--primary-color);">💬 Available 9AM-5PM</span>
+                </div>
+                <div>
+                    <strong>Email Support:</strong><br>
+                    <span style="color: var(--primary-color);">✉️ help@govservices.gov</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar(3);
+            
+            // Set submission date
+            const submissionDate = document.getElementById('submissionDate');
+            if (submissionDate) {
+                const now = new Date();
+                submissionDate.textContent = now.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            }
+        });
+
+        function submitApplication(event) {
+            event.preventDefault();
+            
+            // Show loading state
+            const submitBtn = event.target;
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            // Simulate submission delay
+            setTimeout(() => {
+                showNotification('Application submitted successfully! Confirmation email sent.', 'success');
+                
+                setTimeout(() => {
+                    goHome();
+                }, 2000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html> 

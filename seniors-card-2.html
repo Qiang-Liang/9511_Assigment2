@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seniors Card - Temporary Card | Government Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .print-area, .print-area * {
+                visibility: visible;
+            }
+            .print-area {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+        
+        .temp-card {
+            width: 350px;
+            height: 220px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            border-radius: 15px;
+            color: white;
+            padding: 20px;
+            position: relative;
+            margin: 2rem auto;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            font-family: 'Courier New', monospace;
+        }
+        
+        .temp-card::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 30px;
+            background: #ffd700;
+            border-radius: 4px;
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .card-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .card-logo {
+            font-size: 24px;
+        }
+        
+        .card-number {
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        .card-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 12px;
+        }
+        
+        .temp-stamp {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 10px;
+            border: 1px dashed rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header class="header no-print">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-page">
+        <a href="javascript:goToPreviousStep('seniors-card', 2)" class="back-button no-print">
+            ← Back to Login
+        </a>
+
+        <div class="page-header no-print">
+            <h2 class="page-title">Seniors Card Replacement</h2>
+            <p class="page-subtitle">Step 2 of 3: Temporary Card</p>
+        </div>
+
+        <div class="progress-bar no-print">
+            <div class="progress-step completed">1</div>
+            <div class="progress-step active">2</div>
+            <div class="progress-step">3</div>
+        </div>
+
+        <div class="print-area">
+            <div class="form-section">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;" class="no-print">📄</div>
+                    <h3>Temporary Seniors Card</h3>
+                    <p style="color: var(--text-secondary);" class="no-print">
+                        Your temporary card is ready for printing. This card is valid for 30 days while your replacement card is being processed.
+                    </p>
+                </div>
+            </div>
+
+            <div class="temp-card">
+                <div class="card-header">
+                    <div>
+                        <h4 class="card-title">GOVERNMENT SERVICES</h4>
+                        <div style="font-size: 16px; font-weight: bold;">SENIORS CARD</div>
+                    </div>
+                    <div class="card-logo">👴</div>
+                </div>
+
+                <div class="card-number" id="cardNumber">1234 5678 9012</div>
+
+                <div class="card-details">
+                    <div>
+                        <div style="opacity: 0.8;">NAME:</div>
+                        <div style="font-weight: bold;" id="cardName">JOHN DOE</div>
+                    </div>
+                    <div>
+                        <div style="opacity: 0.8;">DOB:</div>
+                        <div style="font-weight: bold;" id="cardDOB">01/01/1950</div>
+                    </div>
+                    <div>
+                        <div style="opacity: 0.8;">VALID UNTIL:</div>
+                        <div style="font-weight: bold;" id="cardExpiry">12/31/2025</div>
+                    </div>
+                    <div>
+                        <div style="opacity: 0.8;">MEMBER SINCE:</div>
+                        <div style="font-weight: bold;" id="memberSince">2010</div>
+                    </div>
+                </div>
+
+                <div class="temp-stamp">
+                    TEMPORARY<br>
+                    <span id="tempExpiry">Valid until</span>
+                </div>
+            </div>
+
+            <div class="card" style="max-width: 500px; margin: 2rem auto;">
+                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">📋 Temporary Card Information</h4>
+                <div style="display: grid; gap: 0.5rem; font-size: 0.9em;">
+                    <div><strong>Card Type:</strong> Temporary Seniors Card</div>
+                    <div><strong>Issue Date:</strong> <span id="issueDate"></span></div>
+                    <div><strong>Valid Until:</strong> <span id="validUntil"></span></div>
+                    <div><strong>Replacement Status:</strong> <span style="color: #f59e0b;">Processing</span></div>
+                    <div><strong>Estimated Delivery:</strong> <span id="estimatedDelivery"></span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section no-print">
+            <div class="card" style="background-color: #dbeafe; border-color: #3b82f6;">
+                <h4 style="color: #1e40af; margin-bottom: 0.5rem;">ℹ️ Important Instructions</h4>
+                <ul style="margin: 0; padding-left: 1.5rem; color: #1e40af;">
+                    <li>Print this temporary card on standard paper (color or black & white)</li>
+                    <li>Cut along the edges and carry with you as proof of seniors status</li>
+                    <li>This temporary card is valid for 30 days from today</li>
+                    <li>Present this card at participating senior discount locations</li>
+                    <li>Your permanent replacement card will arrive within 7-10 business days</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form-section no-print">
+            <div class="card" style="background-color: #fef3c7; border-color: #f59e0b;">
+                <h4 style="color: #92400e; margin-bottom: 0.5rem;">⚠️ Printing Tips</h4>
+                <ul style="margin: 0; padding-left: 1.5rem; color: #92400e;">
+                    <li>Use standard 8.5" x 11" paper</li>
+                    <li>Ensure your printer has sufficient ink/toner</li>
+                    <li>Print in actual size (do not scale to fit)</li>
+                    <li>For best results, use cardstock or heavy paper</li>
+                    <li>Keep the printed card in a wallet or protective sleeve</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn-group no-print">
+            <button type="button" class="btn btn-secondary" onclick="goToPreviousStep('seniors-card', 2)">
+                Back
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="window.print()">
+                🖨️ Print Temporary Card
+            </button>
+            <button type="button" class="btn btn-primary" onclick="goToNextStep('seniors-card', 3)">
+                Continue to Mailing Info
+            </button>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background-color: var(--surface-color); border-radius: var(--radius-lg);" class="no-print">
+            <h4 style="margin-bottom: 1rem;">Benefits You Can Access</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: left;">
+                <div>
+                    <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">🚌 Transportation</h5>
+                    <ul style="margin: 0; padding-left: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                        <li>Reduced public transit fares</li>
+                        <li>Senior taxi voucher programs</li>
+                        <li>Paratransit services</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">🏥 Healthcare</h5>
+                    <ul style="margin: 0; padding-left: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                        <li>Prescription drug discounts</li>
+                        <li>Vision and dental care</li>
+                        <li>Health screening programs</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">🎭 Recreation</h5>
+                    <ul style="margin: 0; padding-left: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                        <li>Community center discounts</li>
+                        <li>Museum and theater tickets</li>
+                        <li>Parks and recreation programs</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">🛒 Shopping</h5>
+                    <ul style="margin: 0; padding-left: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                        <li>Senior discount days</li>
+                        <li>Grocery store savings</li>
+                        <li>Retail partner discounts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer no-print">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar(2);
+            
+            // Set dates and times
+            const now = new Date();
+            const thirtyDaysFromNow = new Date(now);
+            thirtyDaysFromNow.setDate(now.getDate() + 30);
+            
+            const tenDaysFromNow = new Date(now);
+            tenDaysFromNow.setDate(now.getDate() + 10);
+            
+            // Format dates
+            const formatDate = (date) => {
+                return date.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit'
+                });
+            };
+            
+            const formatDateLong = (date) => {
+                return date.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+            };
+            
+            // Update card information
+            document.getElementById('issueDate').textContent = formatDateLong(now);
+            document.getElementById('validUntil').textContent = formatDateLong(thirtyDaysFromNow);
+            document.getElementById('estimatedDelivery').textContent = formatDateLong(tenDaysFromNow);
+            document.getElementById('tempExpiry').textContent = `Valid until ${formatDate(thirtyDaysFromNow)}`;
+            
+            // Simulate loading user data (in real app, this would come from the login)
+            document.getElementById('cardNumber').textContent = '1234 5678 9012';
+            document.getElementById('cardName').textContent = 'JOHN DOE';
+            document.getElementById('cardDOB').textContent = '01/01/1950';
+            document.getElementById('cardExpiry').textContent = '12/31/2025';
+            document.getElementById('memberSince').textContent = '2010';
+        });
+    </script>
+</body>
+</html> 

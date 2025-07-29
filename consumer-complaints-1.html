@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Complaints - Fraud Verification | Government Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-page">
+        <a href="javascript:goHome()" class="back-button">
+            ← Back to Home
+        </a>
+
+        <div class="page-header">
+            <h2 class="page-title">Consumer Complaints</h2>
+            <p class="page-subtitle">Step 1 of 3: Fraud Type Verification</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-step active">1</div>
+            <div class="progress-step">2</div>
+            <div class="progress-step">3</div>
+        </div>
+
+        <div class="form-section">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">🛡️</div>
+                <h3>Consumer Protection & Fraud Reporting</h3>
+                <p style="color: var(--text-secondary);">
+                    Report online shopping fraud, scams, and consumer protection violations. 
+                    We'll help you file a complaint and take appropriate action.
+                </p>
+            </div>
+        </div>
+
+        <form class="complaint-form" data-next-step="consumer-complaints-2">
+            <div class="form-section">
+                <h3>Type of Issue</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    Please select the category that best describes your consumer complaint or fraud report.
+                </p>
+                
+                <div class="form-group">
+                    <label class="form-label" for="complaintType">Complaint Category *</label>
+                    <select id="complaintType" name="complaintType" class="form-select" required>
+                        <option value="">Select complaint type</option>
+                        <option value="online-fraud">Online Shopping Fraud</option>
+                        <option value="payment-scam">Payment/Credit Card Scam</option>
+                        <option value="identity-theft">Identity Theft</option>
+                        <option value="fake-websites">Fake Websites/Phishing</option>
+                        <option value="non-delivery">Non-delivery of Goods</option>
+                        <option value="defective-products">Defective/Misrepresented Products</option>
+                        <option value="subscription-scam">Unwanted Subscriptions</option>
+                        <option value="tech-support-scam">Tech Support Scam</option>
+                        <option value="investment-scam">Investment/Cryptocurrency Scam</option>
+                        <option value="other-fraud">Other Fraud/Scam</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="otherFraudGroup" style="display: none;">
+                    <label class="form-label" for="otherFraudType">Please specify the type of fraud/scam</label>
+                    <textarea id="otherFraudType" name="otherFraudType" class="form-textarea" 
+                              placeholder="Describe the type of fraud or scam you experienced"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Fraud Details</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="fraudAmount">Estimated Financial Loss *</label>
+                    <select id="fraudAmount" name="fraudAmount" class="form-select" required>
+                        <option value="">Select amount range</option>
+                        <option value="under-100">Under $100</option>
+                        <option value="100-500">$100 - $500</option>
+                        <option value="500-1000">$500 - $1,000</option>
+                        <option value="1000-5000">$1,000 - $5,000</option>
+                        <option value="5000-10000">$5,000 - $10,000</option>
+                        <option value="over-10000">Over $10,000</option>
+                        <option value="no-loss">No financial loss (attempted fraud)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="incidentDate">When did this incident occur? *</label>
+                    <input type="date" id="incidentDate" name="incidentDate" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="businessName">Business/Website Name *</label>
+                    <input type="text" id="businessName" name="businessName" class="form-input" required 
+                           placeholder="Enter the name of the business or website">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="websiteUrl">Website URL (if applicable)</label>
+                    <input type="url" id="websiteUrl" name="websiteUrl" class="form-input" 
+                           placeholder="https://example.com">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="contactMethod">How did they contact you? *</label>
+                    <select id="contactMethod" name="contactMethod" class="form-select" required>
+                        <option value="">Select contact method</option>
+                        <option value="website">Through their website</option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone call</option>
+                        <option value="text">Text message</option>
+                        <option value="social-media">Social media</option>
+                        <option value="advertisement">Online advertisement</option>
+                        <option value="referral">Referral/Word of mouth</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Fraud Verification Checklist</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    Please check all warning signs that apply to your situation. This helps us categorize and prioritize your complaint.
+                </p>
+                
+                <div class="form-group">
+                    <h5>Payment Red Flags:</h5>
+                    <label class="form-label">
+                        <input type="checkbox" name="redFlags" value="unusual-payment">
+                        Requested unusual payment methods (gift cards, cryptocurrency, wire transfer)
+                    </label>
+                    <label class="form-label">
+                        <input type="checkbox" name="redFlags" value="advance-payment">
+                        Required advance payment before delivery
+                    </label>
+                    <label class="form-label">
+                        <input type="checkbox" name="redFlags" value="no-secure-payment">
+                        No secure payment options available
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <h5>Communication Red Flags:</h5>
+                    <label class="form-label">
+                        <input type="checkbox" name="redFlags" value="pressure-tactics">
+                        Used high-pressure sales tactics or urgency
+                    </label>
+                    <label class="form-label">
+                        <input type="checkbox" name="redFlags" value="poor-communication">
+                        Poor grammar/spelling in communications
+                    </label>
+                    <label class="form-label">
+                        <input type="checkbox" name="redFlags" value="fake-contact">
+                        Provided fake or non-working contact information
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <h5>Website/Business Red Flags:</h5>
+                    <label class="form-label">
+                        <input type="checkbox" name="redFlags" value="new-website">
+                        Website appeared recently created or unprofessional
+                    </label>
+                    <label class="form-label">
+                        <input type="checkbox" name="redFlags" value="no-business-info">
+                        No legitimate business address or registration information
+                    </label>
+                    <label class="form-label">
+                        <input type="checkbox" name="redFlags" value="copied-content">
+                        Website content appeared copied from other sources
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Brief Description</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="briefDescription">Brief Summary of Incident *</label>
+                    <textarea id="briefDescription" name="briefDescription" class="form-textarea" required 
+                              placeholder="Provide a brief summary of what happened (detailed information will be requested in the next step)" 
+                              style="min-height: 120px;"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="stillInContact" value="yes">
+                        I am still in contact with this business/scammer
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="reportedElsewhere" value="yes">
+                        I have already reported this to other authorities (police, bank, etc.)
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="card" style="background-color: #fef3c7; border-color: #f59e0b;">
+                    <h4 style="color: #92400e; margin-bottom: 0.5rem;">⚠️ Important Notes</h4>
+                    <ul style="margin: 0; padding-left: 1.5rem; color: #92400e;">
+                        <li><strong>Immediate Action:</strong> If you've shared financial information, contact your bank immediately</li>
+                        <li><strong>Evidence:</strong> Keep all communications, receipts, and screenshots</li>
+                        <li><strong>Police Report:</strong> For crimes involving significant loss, also file a police report</li>
+                        <li><strong>Processing Time:</strong> Complaints are typically processed within 5-10 business days</li>
+                        <li><strong>Follow-up:</strong> We may contact you for additional information</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="card" style="background-color: #dbeafe; border-color: #3b82f6;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">🔒 Your Privacy & Safety</h4>
+                    <ul style="margin: 0; padding-left: 1.5rem; color: #1e40af;">
+                        <li>Your complaint information is kept confidential and secure</li>
+                        <li>Personal details are only shared with relevant authorities when necessary</li>
+                        <li>We may use anonymized data for fraud prevention research</li>
+                        <li>You can request updates on your complaint status at any time</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" onclick="goHome()">Cancel</button>
+                <button type="submit" class="btn btn-primary">Continue to Evidence Upload</button>
+            </div>
+        </form>
+
+        <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background-color: var(--surface-color); border-radius: var(--radius-lg);">
+            <h4 style="margin-bottom: 1rem;">Need Immediate Help?</h4>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div>
+                    <strong>Fraud Hotline:</strong><br>
+                    <span style="color: var(--primary-color);">📞 1-800-FRAUD-HELP</span>
+                </div>
+                <div>
+                    <strong>Emergency:</strong><br>
+                    <span style="color: var(--primary-color);">🚨 If in immediate danger, call 911</span>
+                </div>
+                <div>
+                    <strong>Consumer Protection:</strong><br>
+                    <span style="color: var(--primary-color);">💬 Live chat available 24/7</span>
+                </div>
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                For urgent financial matters, contact your bank or credit card company immediately.
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar(1);
+            
+            // Handle complaint type changes
+            const complaintType = document.getElementById('complaintType');
+            const otherFraudGroup = document.getElementById('otherFraudGroup');
+            
+            complaintType.addEventListener('change', function() {
+                if (this.value === 'other-fraud') {
+                    otherFraudGroup.style.display = 'block';
+                } else {
+                    otherFraudGroup.style.display = 'none';
+                }
+            });
+            
+            // Set max date to today for incident date
+            const incidentDate = document.getElementById('incidentDate');
+            const today = new Date().toISOString().split('T')[0];
+            incidentDate.max = today;
+            
+            // Auto-format URL input
+            const websiteUrl = document.getElementById('websiteUrl');
+            websiteUrl.addEventListener('blur', function() {
+                if (this.value && !this.value.startsWith('http')) {
+                    this.value = 'https://' + this.value;
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

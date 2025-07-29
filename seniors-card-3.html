@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seniors Card - Mailing Information | Government Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-page">
+        <a href="javascript:goToPreviousStep('seniors-card', 3)" class="back-button">
+            ← Back to Temporary Card
+        </a>
+
+        <div class="page-header">
+            <h2 class="page-title">Seniors Card Replacement</h2>
+            <p class="page-subtitle">Step 3 of 3: Mailing Information Confirmation</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-step completed">1</div>
+            <div class="progress-step completed">2</div>
+            <div class="progress-step active">3</div>
+        </div>
+
+        <div class="form-section">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">📮</div>
+                <h3>Confirm Mailing Information</h3>
+                <p style="color: var(--text-secondary);">
+                    Please confirm or update your mailing address where your replacement Seniors Card should be delivered.
+                </p>
+            </div>
+        </div>
+
+        <form class="mailing-form" id="mailingForm">
+            <div class="form-section">
+                <h3>Current Address on File</h3>
+                <div class="card" style="background-color: var(--surface-color);">
+                    <div style="display: grid; gap: 0.5rem;">
+                        <div><strong>Name:</strong> John Doe</div>
+                        <div><strong>Address:</strong> 123 Maple Street</div>
+                        <div><strong>City:</strong> Springfield</div>
+                        <div><strong>State/Province:</strong> Ontario</div>
+                        <div><strong>Postal Code:</strong> K1A 0A6</div>
+                        <div><strong>Country:</strong> Canada</div>
+                    </div>
+                </div>
+                
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label class="form-label">
+                        <input type="radio" name="addressOption" value="current" checked>
+                        Use current address on file
+                    </label>
+                    <label class="form-label">
+                        <input type="radio" name="addressOption" value="update">
+                        Update my mailing address
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section" id="updateAddressSection" style="display: none;">
+                <h3>New Mailing Address</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" class="form-input" 
+                           placeholder="Enter full name for delivery">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="streetAddress">Street Address *</label>
+                    <input type="text" id="streetAddress" name="streetAddress" class="form-input" 
+                           placeholder="Enter street address">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="apartment">Apartment/Unit Number</label>
+                    <input type="text" id="apartment" name="apartment" class="form-input" 
+                           placeholder="Apt, Suite, Unit (optional)">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="city">City *</label>
+                    <input type="text" id="city" name="city" class="form-input" 
+                           placeholder="Enter city">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label" for="province">State/Province *</label>
+                        <select id="province" name="province" class="form-select">
+                            <option value="">Select province/state</option>
+                            <option value="AB">Alberta</option>
+                            <option value="BC">British Columbia</option>
+                            <option value="MB">Manitoba</option>
+                            <option value="NB">New Brunswick</option>
+                            <option value="NL">Newfoundland and Labrador</option>
+                            <option value="NS">Nova Scotia</option>
+                            <option value="ON">Ontario</option>
+                            <option value="PE">Prince Edward Island</option>
+                            <option value="QC">Quebec</option>
+                            <option value="SK">Saskatchewan</option>
+                            <option value="NT">Northwest Territories</option>
+                            <option value="NU">Nunavut</option>
+                            <option value="YT">Yukon</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="postalCode">Postal Code *</label>
+                        <input type="text" id="postalCode" name="postalCode" class="form-input" 
+                               placeholder="A1A 1A1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="country">Country *</label>
+                    <select id="country" name="country" class="form-select">
+                        <option value="CA">Canada</option>
+                        <option value="US">United States</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="specialInstructions">Special Delivery Instructions</label>
+                    <textarea id="specialInstructions" name="specialInstructions" class="form-textarea" 
+                              placeholder="Any special instructions for delivery (optional)"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Delivery Options</h3>
+                
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="radio" name="deliveryMethod" value="standard" checked>
+                        <strong>Standard Delivery (Free)</strong> - 7-10 business days
+                    </label>
+                    <label class="form-label">
+                        <input type="radio" name="deliveryMethod" value="express">
+                        <strong>Express Delivery ($15.00)</strong> - 2-3 business days
+                    </label>
+                    <label class="form-label">
+                        <input type="radio" name="deliveryMethod" value="priority">
+                        <strong>Priority Delivery ($25.00)</strong> - Next business day
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="signature" value="yes">
+                        Require signature on delivery (+$5.00)
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="tracking" value="yes" checked>
+                        Send tracking information via email (Free)
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Payment Summary</h3>
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <span>Replacement Card Fee</span>
+                        <span style="font-weight: 600;">$0.00</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;" id="deliveryFee">
+                        <span>Delivery Fee</span>
+                        <span style="font-weight: 600;">$0.00</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;" id="signatureFee" style="display: none;">
+                        <span>Signature Required</span>
+                        <span style="font-weight: 600;">$5.00</span>
+                    </div>
+                    <hr style="margin: 1rem 0; border: 1px solid var(--border-color);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: var(--font-size-lg); font-weight: 700;">
+                        <span>Total Amount</span>
+                        <span style="color: var(--primary-color);" id="totalAmount">$0.00</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                        * First replacement card per year is free. Additional replacements are $15.00 each.
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="card" style="background-color: #f0fdf4; border-color: #22c55e;">
+                    <h4 style="color: #15803d; margin-bottom: 0.5rem;">📦 Delivery Information</h4>
+                    <ul style="margin: 0; padding-left: 1.5rem; color: #15803d;">
+                        <li>Your replacement card will be mailed in a secure, unmarked envelope</li>
+                        <li>Cards are printed on durable, waterproof material</li>
+                        <li>Delivery confirmation will be sent to your email address</li>
+                        <li>If delivery fails, we'll hold your card for 15 days for pickup</li>
+                        <li>Contact us immediately if your card doesn't arrive as expected</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" onclick="goToPreviousStep('seniors-card', 3)">
+                    Back
+                </button>
+                <button type="submit" class="btn btn-primary" onclick="confirmOrder(event)">
+                    Confirm Order
+                </button>
+            </div>
+        </form>
+
+        <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background-color: var(--surface-color); border-radius: var(--radius-lg);">
+            <h4 style="margin-bottom: 1rem;">Questions About Your Replacement?</h4>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div>
+                    <strong>Customer Service:</strong><br>
+                    <span style="color: var(--primary-color);">📞 1-800-SENIORS</span>
+                </div>
+                <div>
+                    <strong>Track Your Order:</strong><br>
+                    <span style="color: var(--primary-color);">🌐 govservices.gov/track</span>
+                </div>
+                <div>
+                    <strong>Email Support:</strong><br>
+                    <span style="color: var(--primary-color);">✉️ cards@govservices.gov</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar(3);
+            
+            // Handle address option changes
+            const addressOptions = document.querySelectorAll('input[name="addressOption"]');
+            const updateAddressSection = document.getElementById('updateAddressSection');
+            
+            addressOptions.forEach(option => {
+                option.addEventListener('change', function() {
+                    if (this.value === 'update') {
+                        updateAddressSection.style.display = 'block';
+                    } else {
+                        updateAddressSection.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Handle delivery method and pricing
+            const deliveryMethods = document.querySelectorAll('input[name="deliveryMethod"]');
+            const signatureCheckbox = document.querySelector('input[name="signature"]');
+            const deliveryFee = document.getElementById('deliveryFee');
+            const signatureFee = document.getElementById('signatureFee');
+            const totalAmount = document.getElementById('totalAmount');
+            
+            function updatePricing() {
+                const selectedDelivery = document.querySelector('input[name="deliveryMethod"]:checked').value;
+                const requireSignature = signatureCheckbox.checked;
+                
+                let deliveryCost = 0;
+                switch(selectedDelivery) {
+                    case 'express':
+                        deliveryCost = 15.00;
+                        break;
+                    case 'priority':
+                        deliveryCost = 25.00;
+                        break;
+                }
+                
+                let signatureCost = requireSignature ? 5.00 : 0;
+                let total = deliveryCost + signatureCost;
+                
+                deliveryFee.querySelector('span:last-child').textContent = `$${deliveryCost.toFixed(2)}`;
+                
+                if (requireSignature) {
+                    signatureFee.style.display = 'flex';
+                } else {
+                    signatureFee.style.display = 'none';
+                }
+                
+                totalAmount.textContent = `$${total.toFixed(2)}`;
+            }
+            
+            deliveryMethods.forEach(method => {
+                method.addEventListener('change', updatePricing);
+            });
+            
+            signatureCheckbox.addEventListener('change', updatePricing);
+            
+            // Format postal code
+            const postalCode = document.getElementById('postalCode');
+            if (postalCode) {
+                postalCode.addEventListener('input', function() {
+                    let value = this.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+                    if (value.length >= 3) {
+                        value = value.substring(0, 3) + ' ' + value.substring(3, 6);
+                    }
+                    this.value = value;
+                });
+            }
+            
+            // Initialize pricing
+            updatePricing();
+        });
+
+        function confirmOrder(event) {
+            event.preventDefault();
+            
+            // Show loading state
+            const submitBtn = event.target;
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Processing Order...';
+            
+            // Simulate order processing
+            setTimeout(() => {
+                showNotification('Replacement card order confirmed! You will receive tracking information via email.', 'success');
+                
+                setTimeout(() => {
+                    goHome();
+                }, 2000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html> 

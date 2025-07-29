@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seniors Card Replacement - Login | Government Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-page">
+        <a href="javascript:goHome()" class="back-button">
+            ← Back to Home
+        </a>
+
+        <div class="page-header">
+            <h2 class="page-title">Seniors Card Replacement</h2>
+            <p class="page-subtitle">Step 1 of 3: Secure Login</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-step active">1</div>
+            <div class="progress-step">2</div>
+            <div class="progress-step">3</div>
+        </div>
+
+        <div class="form-section">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">👴</div>
+                <h3>Seniors Card Replacement Service</h3>
+                <p style="color: var(--text-secondary);">
+                    Welcome to the Seniors Card replacement service. Please log in to your account to access your card details 
+                    and request a replacement for your lost or damaged Seniors Card.
+                </p>
+            </div>
+        </div>
+
+        <form class="login-form" data-next-step="seniors-card-2">
+            <div class="form-section">
+                <h3>Account Login</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="cardNumber">Seniors Card Number *</label>
+                    <input type="text" id="cardNumber" name="cardNumber" class="form-input" required 
+                           placeholder="Enter your 12-digit card number" maxlength="12" pattern="\d{12}">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" class="form-input" required 
+                           placeholder="Enter your last name as it appears on your card">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="dateOfBirth">Date of Birth *</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="postalCode">Postal Code *</label>
+                    <input type="text" id="postalCode" name="postalCode" class="form-input" required 
+                           placeholder="Enter your postal code" maxlength="10">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Security Verification</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="securityQuestion">Security Question *</label>
+                    <select id="securityQuestion" name="securityQuestion" class="form-select" required>
+                        <option value="">Select a security question</option>
+                        <option value="mother-maiden">What is your mother's maiden name?</option>
+                        <option value="first-pet">What was the name of your first pet?</option>
+                        <option value="birth-city">In what city were you born?</option>
+                        <option value="first-school">What was the name of your first school?</option>
+                        <option value="favorite-book">What is your favorite book?</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="securityAnswer">Security Answer *</label>
+                    <input type="text" id="securityAnswer" name="securityAnswer" class="form-input" required 
+                           placeholder="Enter your security answer">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Replacement Reason</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="replacementReason">Why do you need a replacement card? *</label>
+                    <select id="replacementReason" name="replacementReason" class="form-select" required>
+                        <option value="">Select replacement reason</option>
+                        <option value="lost">Card Lost</option>
+                        <option value="stolen">Card Stolen</option>
+                        <option value="damaged">Card Damaged</option>
+                        <option value="expired">Card Expired</option>
+                        <option value="name-change">Name Change</option>
+                        <option value="address-change">Address Change</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="otherReasonGroup" style="display: none;">
+                    <label class="form-label" for="otherReason">Please specify other reason</label>
+                    <textarea id="otherReason" name="otherReason" class="form-textarea" 
+                              placeholder="Please explain why you need a replacement card"></textarea>
+                </div>
+
+                <div class="form-group" id="policeReportGroup" style="display: none;">
+                    <label class="form-label">
+                        <input type="checkbox" name="policeReport" value="yes">
+                        I have filed a police report for this stolen card
+                    </label>
+                    <small style="color: var(--text-secondary); display: block; margin-top: 0.5rem;">
+                        Police report number (optional): 
+                        <input type="text" name="policeReportNumber" class="form-input" style="margin-top: 0.25rem;" 
+                               placeholder="Enter police report number if available">
+                    </small>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="card" style="background-color: #fef3c7; border-color: #f59e0b;">
+                    <h4 style="color: #92400e; margin-bottom: 0.5rem;">📋 Replacement Process Information</h4>
+                    <ul style="margin: 0; padding-left: 1.5rem; color: #92400e;">
+                        <li><strong>Processing Time:</strong> 7-10 business days for standard delivery</li>
+                        <li><strong>Express Delivery:</strong> 2-3 business days (additional fee applies)</li>
+                        <li><strong>Temporary Card:</strong> Available for immediate download and printing</li>
+                        <li><strong>Replacement Fee:</strong> $15.00 (waived for first replacement per year)</li>
+                        <li><strong>Card Validity:</strong> New card valid for remaining period of original card</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="card" style="background-color: #dbeafe; border-color: #3b82f6;">
+                    <h4 style="color: #1e40af; margin-bottom: 0.5rem;">🔒 Privacy & Security</h4>
+                    <ul style="margin: 0; padding-left: 1.5rem; color: #1e40af;">
+                        <li>Your information is protected with 256-bit SSL encryption</li>
+                        <li>We verify your identity using multiple security checkpoints</li>
+                        <li>Account access is logged for security monitoring</li>
+                        <li>Sensitive data is never stored in plain text</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" onclick="goHome()">Cancel</button>
+                <button type="submit" class="btn btn-primary">Verify & Continue</button>
+            </div>
+        </form>
+
+        <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background-color: var(--surface-color); border-radius: var(--radius-lg);">
+            <h4 style="margin-bottom: 1rem;">Need Help?</h4>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div>
+                    <strong>Seniors Helpline:</strong><br>
+                    <span style="color: var(--primary-color);">📞 1-800-SENIORS</span>
+                </div>
+                <div>
+                    <strong>Email Support:</strong><br>
+                    <span style="color: var(--primary-color);">✉️ seniors@govservices.gov</span>
+                </div>
+                <div>
+                    <strong>Office Hours:</strong><br>
+                    <span>Mon-Fri: 8AM-5PM</span>
+                </div>
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                Don't have your card number? Visit your local Seniors Services office with valid ID.
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar(1);
+            
+            // Handle replacement reason changes
+            const replacementReason = document.getElementById('replacementReason');
+            const otherReasonGroup = document.getElementById('otherReasonGroup');
+            const policeReportGroup = document.getElementById('policeReportGroup');
+            
+            replacementReason.addEventListener('change', function() {
+                // Hide all conditional groups first
+                otherReasonGroup.style.display = 'none';
+                policeReportGroup.style.display = 'none';
+                
+                // Show relevant groups based on selection
+                if (this.value === 'other') {
+                    otherReasonGroup.style.display = 'block';
+                } else if (this.value === 'stolen') {
+                    policeReportGroup.style.display = 'block';
+                }
+            });
+            
+            // Format card number input
+            const cardNumber = document.getElementById('cardNumber');
+            cardNumber.addEventListener('input', function() {
+                // Remove any non-digit characters
+                let value = this.value.replace(/\D/g, '');
+                // Limit to 12 digits
+                if (value.length > 12) {
+                    value = value.substring(0, 12);
+                }
+                this.value = value;
+            });
+            
+            // Format postal code
+            const postalCode = document.getElementById('postalCode');
+            postalCode.addEventListener('input', function() {
+                let value = this.value.toUpperCase();
+                // Basic postal code formatting (can handle both US ZIP and Canadian postal codes)
+                if (value.length === 6 && /^[A-Z]\d[A-Z]\d[A-Z]\d$/.test(value)) {
+                    this.value = value.substring(0, 3) + ' ' + value.substring(3);
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Services Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="hero-section">
+            <h2 class="hero-title">Welcome to Government Services Portal</h2>
+            <p class="hero-subtitle">Access essential services quickly and efficiently</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card" onclick="navigateTo('license-renewal')" role="button" tabindex="0" aria-label="License Renewal Service">
+                <div class="service-icon">🪪</div>
+                <h3 class="service-title">License Renewal</h3>
+                <p class="service-description">Renew your driver's license online with easy payment options</p>
+                <div class="service-arrow">→</div>
+            </div>
+
+            <div class="service-card" onclick="navigateTo('subsidy-application')" role="button" tabindex="0" aria-label="Subsidy Application Service">
+                <div class="service-icon">💰</div>
+                <h3 class="service-title">Subsidy Application</h3>
+                <p class="service-description">Apply for government subsidies and financial assistance</p>
+                <div class="service-arrow">→</div>
+            </div>
+
+            <div class="service-card" onclick="navigateTo('seniors-card')" role="button" tabindex="0" aria-label="Seniors Card Replacement Service">
+                <div class="service-icon">👴</div>
+                <h3 class="service-title">Seniors Card Replacement</h3>
+                <p class="service-description">Get a replacement for your lost or damaged seniors card</p>
+                <div class="service-arrow">→</div>
+            </div>
+
+            <div class="service-card" onclick="navigateTo('consumer-complaints')" role="button" tabindex="0" aria-label="Consumer Complaints Service">
+                <div class="service-icon">🛡️</div>
+                <h3 class="service-title">Consumer Complaints</h3>
+                <p class="service-description">File complaints about online shopping fraud and scams</p>
+                <div class="service-arrow">→</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

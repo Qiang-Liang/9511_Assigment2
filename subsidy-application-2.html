@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsidy Application - Form | Government Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-page">
+        <a href="javascript:goToPreviousStep('subsidy-application', 2)" class="back-button">
+            ← Back to Login
+        </a>
+
+        <div class="page-header">
+            <h2 class="page-title">Subsidy Application</h2>
+            <p class="page-subtitle">Step 2 of 3: Application Form</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-step completed">1</div>
+            <div class="progress-step active">2</div>
+            <div class="progress-step">3</div>
+        </div>
+
+        <form class="subsidy-form" data-next-step="subsidy-application-3">
+            <div class="form-section">
+                <h3>Subsidy Type Selection</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="subsidyType">Type of Subsidy *</label>
+                    <select id="subsidyType" name="subsidyType" class="form-select" required>
+                        <option value="">Select subsidy type</option>
+                        <option value="housing">Housing Assistance</option>
+                        <option value="food">Food Assistance (SNAP)</option>
+                        <option value="healthcare">Healthcare Subsidies</option>
+                        <option value="childcare">Childcare Support</option>
+                        <option value="utility">Utility Bill Assistance</option>
+                        <option value="education">Education Grants</option>
+                        <option value="small-business">Small Business Support</option>
+                        <option value="senior">Senior Citizen Benefits</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="requestedAmount">Requested Amount *</label>
+                    <input type="number" id="requestedAmount" name="requestedAmount" class="form-input" required 
+                           placeholder="Enter amount in USD" min="1" max="50000">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="urgency">Application Urgency *</label>
+                    <select id="urgency" name="urgency" class="form-select" required>
+                        <option value="">Select urgency level</option>
+                        <option value="routine">Routine (30-45 days)</option>
+                        <option value="priority">Priority (14-21 days)</option>
+                        <option value="emergency">Emergency (3-7 days)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Personal Information</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="fullName">Full Legal Name *</label>
+                    <input type="text" id="fullName" name="fullName" class="form-input" required 
+                           placeholder="Enter your full legal name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="dateOfBirth">Date of Birth *</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="ssn">Social Security Number *</label>
+                    <input type="text" id="ssn" name="ssn" class="form-input" required 
+                           placeholder="XXX-XX-XXXX" pattern="\d{3}-\d{2}-\d{4}">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="maritalStatus">Marital Status *</label>
+                    <select id="maritalStatus" name="maritalStatus" class="form-select" required>
+                        <option value="">Select marital status</option>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="widowed">Widowed</option>
+                        <option value="separated">Separated</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="dependents">Number of Dependents *</label>
+                    <input type="number" id="dependents" name="dependents" class="form-input" required 
+                           placeholder="0" min="0" max="20">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Contact Information</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-input" required 
+                           placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" required 
+                           placeholder="(XXX) XXX-XXXX">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="address">Mailing Address *</label>
+                    <textarea id="address" name="address" class="form-textarea" required 
+                              placeholder="Enter your complete mailing address"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Financial Information</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="annualIncome">Annual Household Income *</label>
+                    <input type="number" id="annualIncome" name="annualIncome" class="form-input" required 
+                           placeholder="Enter total annual income" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="employmentStatus">Employment Status *</label>
+                    <select id="employmentStatus" name="employmentStatus" class="form-select" required>
+                        <option value="">Select employment status</option>
+                        <option value="employed-full">Employed Full-time</option>
+                        <option value="employed-part">Employed Part-time</option>
+                        <option value="self-employed">Self-employed</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="retired">Retired</option>
+                        <option value="student">Student</option>
+                        <option value="disabled">Disabled</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="monthlyExpenses">Monthly Living Expenses *</label>
+                    <input type="number" id="monthlyExpenses" name="monthlyExpenses" class="form-input" required 
+                           placeholder="Enter total monthly expenses" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="bankAccount">Bank Account Information</label>
+                    <input type="text" id="bankAccount" name="bankAccount" class="form-input" 
+                           placeholder="Bank name and last 4 digits of account number">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Supporting Documentation</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    Please upload required documents to support your application. Accepted formats: PDF, JPG, PNG, DOC, DOCX (Max 10MB each)
+                </p>
+                
+                <div class="upload-area">
+                    <div class="upload-icon">📎</div>
+                    <h4>Upload Required Documents</h4>
+                    <p class="upload-text">Click or drag files here to upload</p>
+                    <div class="file-list"></div>
+                </div>
+
+                <div style="margin-top: 1rem;">
+                    <h5>Required Documents:</h5>
+                    <ul style="color: var(--text-secondary); margin-left: 1.5rem;">
+                        <li>Proof of income (pay stubs, tax returns)</li>
+                        <li>Bank statements (last 3 months)</li>
+                        <li>Identification (driver's license, passport)</li>
+                        <li>Proof of residence (utility bills, lease agreement)</li>
+                        <li>Social Security card</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Application Reason</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="reason">Detailed Reason for Subsidy Request *</label>
+                    <textarea id="reason" name="reason" class="form-textarea" required 
+                              placeholder="Please provide a detailed explanation of why you need this subsidy, including specific circumstances, financial hardship details, and how this assistance will help you." 
+                              style="min-height: 150px;"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="previousApplications">Previous Subsidy Applications</label>
+                    <textarea id="previousApplications" name="previousApplications" class="form-textarea" 
+                              placeholder="Please list any previous government assistance or subsidy applications (optional)"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Declaration and Consent</h3>
+                
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="truthfulness" value="yes" required>
+                        I declare that all information provided is true and accurate to the best of my knowledge *
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="verification" value="yes" required>
+                        I authorize verification of the information provided in this application *
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="updates" value="yes">
+                        I agree to receive updates about my application via email and SMS
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="dataSharing" value="yes">
+                        I consent to sharing my information with relevant government agencies for verification purposes
+                    </label>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" onclick="goToPreviousStep('subsidy-application', 2)">
+                    Back
+                </button>
+                <button type="submit" class="btn btn-primary">Review Application</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar(2);
+            
+            // Auto-format SSN input
+            const ssnInput = document.getElementById('ssn');
+            ssnInput.addEventListener('input', function() {
+                let value = this.value.replace(/\D/g, '');
+                if (value.length >= 6) {
+                    value = value.substring(0, 3) + '-' + value.substring(3, 5) + '-' + value.substring(5, 9);
+                } else if (value.length >= 3) {
+                    value = value.substring(0, 3) + '-' + value.substring(3);
+                }
+                this.value = value;
+            });
+            
+            // Format currency inputs
+            const currencyInputs = ['requestedAmount', 'annualIncome', 'monthlyExpenses'];
+            currencyInputs.forEach(id => {
+                const input = document.getElementById(id);
+                if (input) {
+                    input.addEventListener('blur', function() {
+                        if (this.value) {
+                            this.value = parseFloat(this.value).toFixed(2);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

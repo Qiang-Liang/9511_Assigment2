@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Complaints - Final Review | Government Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-page">
+        <a href="javascript:goToPreviousStep('consumer-complaints', 3)" class="back-button">
+            ← Back to Evidence Upload
+        </a>
+
+        <div class="page-header">
+            <h2 class="page-title">Consumer Complaints</h2>
+            <p class="page-subtitle">Step 3 of 3: Complaint Review & Submission</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-step completed">1</div>
+            <div class="progress-step completed">2</div>
+            <div class="progress-step active">3</div>
+        </div>
+
+        <div class="form-section">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">📋</div>
+                <h3>Review Your Complaint</h3>
+                <p style="color: var(--text-secondary);">
+                    Please review your complaint information below. Once submitted, your complaint will be processed and you'll receive a confirmation email with a reference number.
+                </p>
+            </div>
+        </div>
+
+        <div class="card" style="max-width: 800px; margin: 0 auto 2rem auto; border: 2px solid var(--border-color);">
+            <div style="background-color: var(--primary-color); color: white; padding: 1rem; margin: -2rem -2rem 2rem -2rem; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+                <h4 style="margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>🛡️</span>
+                    Consumer Complaint - Reference #CC2024-789123
+                </h4>
+            </div>
+
+            <div class="complaint-preview">
+                <div class="form-section">
+                    <h4 style="color: var(--primary-color); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                        Complaint Summary
+                    </h4>
+                    <div style="display: grid; gap: 0.75rem;">
+                        <div><strong>Type of Fraud:</strong> Online Shopping Fraud</div>
+                        <div><strong>Business Name:</strong> FakeStore Electronics</div>
+                        <div><strong>Website:</strong> https://fakestore-electronics.com</div>
+                        <div><strong>Financial Loss:</strong> $500 - $1,000</div>
+                        <div><strong>Incident Date:</strong> <span id="incidentDate"></span></div>
+                        <div><strong>Contact Method:</strong> Through their website</div>
+                        <div><strong>Desired Outcome:</strong> Full refund of money paid</div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4 style="color: var(--primary-color); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                        Your Information
+                    </h4>
+                    <div style="display: grid; gap: 0.75rem;">
+                        <div><strong>Name:</strong> John Smith</div>
+                        <div><strong>Email:</strong> john.smith@email.com</div>
+                        <div><strong>Phone:</strong> (555) 123-4567</div>
+                        <div><strong>Address:</strong> 123 Main Street, Springfield, IL 62701</div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4 style="color: var(--primary-color); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                        Red Flags Identified
+                    </h4>
+                    <div style="display: grid; gap: 0.5rem;">
+                        <div>• Requested unusual payment methods (gift cards, cryptocurrency, wire transfer)</div>
+                        <div>• Required advance payment before delivery</div>
+                        <div>• Used high-pressure sales tactics or urgency</div>
+                        <div>• Website appeared recently created or unprofessional</div>
+                        <div>• No legitimate business address or registration information</div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4 style="color: var(--primary-color); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                        Incident Description
+                    </h4>
+                    <div style="background-color: var(--surface-color); padding: 1rem; border-radius: var(--radius-md); line-height: 1.6;">
+                        <p style="margin: 0;">
+                            I ordered a laptop computer from FakeStore Electronics on November 15, 2024, for $850. The website looked professional and claimed to offer brand new laptops at discounted prices. They required full payment upfront via wire transfer, claiming it was for "security purposes." 
+                        </p>
+                        <p style="margin: 1rem 0 0 0;">
+                            After payment, I received a confirmation email but no tracking information. When I tried to contact them after a week, their phone number was disconnected and emails bounced back. The website is now offline. I have been unable to receive either the product or a refund.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4 style="color: var(--primary-color); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                        Uploaded Evidence
+                    </h4>
+                    <div style="display: grid; gap: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span>📧</span>
+                            <span>Email_confirmation_fakestore.pdf</span>
+                            <span style="color: var(--text-secondary); font-size: 0.9em;">(2.3 MB)</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span>💳</span>
+                            <span>Bank_transfer_receipt.pdf</span>
+                            <span style="color: var(--text-secondary); font-size: 0.9em;">(1.1 MB)</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span>🖼️</span>
+                            <span>Website_screenshots.zip</span>
+                            <span style="color: var(--text-secondary); font-size: 0.9em;">(5.7 MB)</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span>📱</span>
+                            <span>Text_messages_screenshot.png</span>
+                            <span style="color: var(--text-secondary); font-size: 0.9em;">(0.8 MB)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4 style="color: var(--primary-color); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                        Submission Details
+                    </h4>
+                    <div style="display: grid; gap: 0.75rem;">
+                        <div><strong>Submission Date:</strong> <span id="submissionDate"></span></div>
+                        <div><strong>Reference Number:</strong> CC2024-789123</div>
+                        <div><strong>Priority Level:</strong> <span style="color: #f59e0b;">High - Financial Loss</span></div>
+                        <div><strong>Estimated Processing Time:</strong> 5-10 business days</div>
+                        <div><strong>Assigned Department:</strong> Online Fraud Investigation Unit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="card" style="background-color: #dbeafe; border-color: #3b82f6;">
+                <h4 style="color: #1e40af; margin-bottom: 0.5rem;">📝 What Happens Next?</h4>
+                <ol style="margin: 0; padding-left: 1.5rem; color: #1e40af;">
+                    <li><strong>Immediate Confirmation:</strong> You'll receive an email confirmation with your reference number</li>
+                    <li><strong>Initial Review (1-2 days):</strong> Our team will review your complaint for completeness</li>
+                    <li><strong>Investigation Assignment (3-5 days):</strong> Your case will be assigned to a specialist investigator</li>
+                    <li><strong>Contact & Follow-up (5-10 days):</strong> We may contact you for additional information</li>
+                    <li><strong>Resolution Actions:</strong> We'll work with relevant authorities and businesses to resolve your complaint</li>
+                    <li><strong>Status Updates:</strong> You'll receive regular updates on your complaint status</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="card" style="background-color: #fef3c7; border-color: #f59e0b;">
+                <h4 style="color: #92400e; margin-bottom: 0.5rem;">⚠️ Important Reminders</h4>
+                <ul style="margin: 0; padding-left: 1.5rem; color: #92400e;">
+                    <li><strong>Keep Records:</strong> Save all documentation related to this complaint</li>
+                    <li><strong>Reference Number:</strong> Use CC2024-789123 for all future communications</li>
+                    <li><strong>No Guarantees:</strong> While we investigate all complaints, we cannot guarantee specific outcomes</li>
+                    <li><strong>Stay Alert:</strong> Continue monitoring your financial accounts for unauthorized activity</li>
+                    <li><strong>Report Changes:</strong> Notify us immediately if your situation changes</li>
+                </ul>
+            </div>
+        </div>
+
+        <form id="finalSubmissionForm">
+            <div class="form-section">
+                <h3>Final Submission Consent</h3>
+                
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="informationAccurate" value="yes" required>
+                        I certify that all information provided in this complaint is true and accurate to the best of my knowledge *
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="consentInvestigation" value="yes" required>
+                        I consent to the investigation of this complaint and sharing of relevant information with appropriate authorities *
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="consentContact" value="yes" required>
+                        I consent to being contacted by investigators regarding this complaint *
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="understandProcess" value="yes" required>
+                        I understand that complaint processing may take 5-10 business days and outcomes are not guaranteed *
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="emailUpdates" value="yes" checked>
+                        I would like to receive email updates about my complaint status
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="preventionData" value="yes">
+                        I consent to my anonymized complaint data being used for fraud prevention research
+                    </label>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" onclick="goToPreviousStep('consumer-complaints', 3)">
+                    Back to Edit
+                </button>
+                <button type="submit" class="btn btn-primary" onclick="submitComplaint(event)">
+                    🚀 Submit Complaint
+                </button>
+            </div>
+        </form>
+
+        <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background-color: var(--surface-color); border-radius: var(--radius-lg);">
+            <h4 style="margin-bottom: 1rem;">Need Support During This Process?</h4>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div>
+                    <strong>Complaint Status:</strong><br>
+                    <span style="color: var(--primary-color);">🌐 govservices.gov/track</span>
+                </div>
+                <div>
+                    <strong>Consumer Hotline:</strong><br>
+                    <span style="color: var(--primary-color);">📞 1-800-CONSUMER</span>
+                </div>
+                <div>
+                    <strong>Victim Support:</strong><br>
+                    <span style="color: var(--primary-color);">💬 Available 24/7</span>
+                </div>
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                You are not alone. We're here to help you through this process and work toward a resolution.
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar(3);
+            
+            // Set current date information
+            const now = new Date();
+            const submissionDate = document.getElementById('submissionDate');
+            const incidentDate = document.getElementById('incidentDate');
+            
+            if (submissionDate) {
+                submissionDate.textContent = now.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            }
+            
+            if (incidentDate) {
+                const pastDate = new Date(now);
+                pastDate.setDate(pastDate.getDate() - 7);
+                incidentDate.textContent = pastDate.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+            }
+        });
+
+        function submitComplaint(event) {
+            event.preventDefault();
+            
+            // Validate required checkboxes
+            const requiredCheckboxes = document.querySelectorAll('input[type="checkbox"][required]');
+            let allChecked = true;
+            
+            requiredCheckboxes.forEach(checkbox => {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+            });
+            
+            if (!allChecked) {
+                showNotification('Please check all required consent boxes before submitting.', 'error');
+                return;
+            }
+            
+            // Show loading state
+            const submitBtn = event.target;
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span style="display: inline-block; animation: spin 1s linear infinite;">⏳</span> Submitting Complaint...';
+            
+            // Simulate submission process
+            setTimeout(() => {
+                showNotification('Complaint submitted successfully! Confirmation email sent to your registered address.', 'success');
+                
+                // Show success message with reference number
+                setTimeout(() => {
+                    alert(`✅ SUCCESS!\n\nYour complaint has been submitted successfully.\n\nReference Number: CC2024-789123\n\nYou will receive a confirmation email shortly with detailed information about the next steps.\n\nThank you for helping us fight fraud and protect consumers.`);
+                    
+                    // Redirect to home after showing success
+                    setTimeout(() => {
+                        goHome();
+                    }, 2000);
+                }, 1000);
+            }, 3000);
+        }
+    </script>
+</body>
+</html> 

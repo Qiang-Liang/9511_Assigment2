@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Renewal - Confirmation | Government Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-page">
+        <div class="page-header">
+            <h2 class="page-title">License Renewal Complete</h2>
+            <p class="page-subtitle">Step 3 of 3: Confirmation</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-step completed">1</div>
+            <div class="progress-step completed">2</div>
+            <div class="progress-step completed">3</div>
+        </div>
+
+        <div class="form-section" style="text-align: center; padding: 2rem;">
+            <div style="font-size: 4rem; color: #10b981; margin-bottom: 1rem;">✓</div>
+            <h3 style="color: #10b981; margin-bottom: 1rem;">Payment Successful!</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                Your license renewal has been processed successfully. Your new license will be mailed to you within 7-10 business days.
+            </p>
+        </div>
+
+        <div class="card-list">
+            <div class="card">
+                <h4 style="margin-bottom: 1rem; color: var(--primary-color);">Transaction Details</h4>
+                <div style="display: grid; gap: 0.5rem;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Transaction ID:</span>
+                        <span style="font-weight: 600;">#LR2024-789456</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Payment Method:</span>
+                        <span style="font-weight: 600;">Credit Card (**** 3456)</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Amount Paid:</span>
+                        <span style="font-weight: 600; color: var(--primary-color);">$50.50</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Date & Time:</span>
+                        <span style="font-weight: 600;" id="transactionDate"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4 style="margin-bottom: 1rem; color: var(--primary-color);">New License Information</h4>
+                <div style="display: grid; gap: 0.5rem;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>License Number:</span>
+                        <span style="font-weight: 600;">DL-2024-987654</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Issue Date:</span>
+                        <span style="font-weight: 600;" id="issueDate"></span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Expiration Date:</span>
+                        <span style="font-weight: 600;" id="expirationDate"></span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>License Class:</span>
+                        <span style="font-weight: 600;">Class C - Regular</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Status:</span>
+                        <span style="font-weight: 600; color: #10b981;">Active</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4 style="margin-bottom: 1rem; color: var(--primary-color);">Delivery Information</h4>
+                <div style="display: grid; gap: 0.5rem;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Delivery Method:</span>
+                        <span style="font-weight: 600;">Standard Mail</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Expected Delivery:</span>
+                        <span style="font-weight: 600;" id="deliveryDate"></span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Tracking Available:</span>
+                        <span style="font-weight: 600;">Yes</span>
+                    </div>
+                    <div style="margin-top: 1rem; padding: 1rem; background-color: #dbeafe; border-radius: 0.5rem;">
+                        <p style="margin: 0; color: #1e40af; font-size: 0.9em;">
+                            📧 A confirmation email with tracking information has been sent to your registered email address.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h4 style="margin-bottom: 1rem; color: var(--primary-color);">Important Notes</h4>
+                <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.5rem;">Your current license remains valid until your new license arrives</li>
+                    <li style="margin-bottom: 0.5rem;">If you don't receive your new license within 14 business days, please contact us</li>
+                    <li style="margin-bottom: 0.5rem;">Keep your receipt for your records</li>
+                    <li style="margin-bottom: 0.5rem;">Address changes must be reported separately through the address change service</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary" onclick="window.print()">
+                🖨️ Print Receipt
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="downloadReceipt()">
+                📄 Download PDF
+            </button>
+            <button type="button" class="btn btn-primary" onclick="goHome()">
+                Return to Home
+            </button>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background-color: var(--surface-color); border-radius: var(--radius-lg);">
+            <h4 style="margin-bottom: 1rem;">Need Help?</h4>
+            <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                If you have questions about your license renewal or need assistance, please contact our customer service team.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div>
+                    <strong>Phone:</strong><br>
+                    <span style="color: var(--primary-color);">📞 1-800-DMV-HELP</span>
+                </div>
+                <div>
+                    <strong>Email:</strong><br>
+                    <span style="color: var(--primary-color);">✉️ support@govservices.gov</span>
+                </div>
+                <div>
+                    <strong>Hours:</strong><br>
+                    <span>Mon-Fri: 8AM-6PM</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar(3);
+            
+            // Set current date/time information
+            const now = new Date();
+            const transactionDate = document.getElementById('transactionDate');
+            const issueDate = document.getElementById('issueDate');
+            const expirationDate = document.getElementById('expirationDate');
+            const deliveryDate = document.getElementById('deliveryDate');
+            
+            if (transactionDate) {
+                transactionDate.textContent = now.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            }
+            
+            if (issueDate) {
+                issueDate.textContent = now.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+            }
+            
+            if (expirationDate) {
+                const expiry = new Date(now);
+                expiry.setFullYear(expiry.getFullYear() + 5);
+                expirationDate.textContent = expiry.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+            }
+            
+            if (deliveryDate) {
+                const delivery = new Date(now);
+                delivery.setDate(delivery.getDate() + 10);
+                deliveryDate.textContent = delivery.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+            }
+        });
+        
+        function downloadReceipt() {
+            // In a real application, this would generate a PDF
+            showNotification('PDF receipt download will be available soon');
+        }
+    </script>
+</body>
+</html> 

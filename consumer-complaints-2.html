@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Complaints - Evidence Upload | Government Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-page">
+        <a href="javascript:goToPreviousStep('consumer-complaints', 2)" class="back-button">
+            ← Back to Fraud Verification
+        </a>
+
+        <div class="page-header">
+            <h2 class="page-title">Consumer Complaints</h2>
+            <p class="page-subtitle">Step 2 of 3: Evidence Upload</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-step completed">1</div>
+            <div class="progress-step active">2</div>
+            <div class="progress-step">3</div>
+        </div>
+
+        <div class="form-section">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">📁</div>
+                <h3>Upload Supporting Evidence</h3>
+                <p style="color: var(--text-secondary);">
+                    Please provide detailed information about your complaint and upload any supporting documents. 
+                    Strong evidence helps us build a more effective case.
+                </p>
+            </div>
+        </div>
+
+        <form class="evidence-form" data-next-step="consumer-complaints-3">
+            <div class="form-section">
+                <h3>Your Personal Information</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" class="form-input" required 
+                           placeholder="Enter your full legal name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-input" required 
+                           placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" required 
+                           placeholder="(XXX) XXX-XXXX">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="address">Mailing Address</label>
+                    <textarea id="address" name="address" class="form-textarea" 
+                              placeholder="Enter your complete mailing address (optional but helpful for follow-up)"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Detailed Complaint Description</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="detailedDescription">Complete Description of Incident *</label>
+                    <textarea id="detailedDescription" name="detailedDescription" class="form-textarea" required 
+                              placeholder="Please provide a comprehensive description of what happened. Include:&#10;• Timeline of events&#10;• Specific actions taken by the fraudster/business&#10;• Your responses and actions&#10;• Any promises or claims made&#10;• Payment methods used&#10;• Current status of the situation" 
+                              style="min-height: 200px;"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="desiredOutcome">What outcome are you seeking? *</label>
+                    <select id="desiredOutcome" name="desiredOutcome" class="form-select" required>
+                        <option value="">Select desired outcome</option>
+                        <option value="refund">Full refund of money paid</option>
+                        <option value="partial-refund">Partial refund</option>
+                        <option value="product-delivery">Delivery of promised product/service</option>
+                        <option value="investigation">Investigation and prosecution</option>
+                        <option value="warning-others">Warning to prevent others from being scammed</option>
+                        <option value="account-closure">Closure of fraudulent business/website</option>
+                        <option value="other">Other (please specify)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="otherOutcomeGroup" style="display: none;">
+                    <label class="form-label" for="otherOutcome">Please specify your desired outcome</label>
+                    <textarea id="otherOutcome" name="otherOutcome" class="form-textarea" 
+                              placeholder="Describe what outcome you're seeking"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Communication Records</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="communicationLog">Communication History</label>
+                    <textarea id="communicationLog" name="communicationLog" class="form-textarea" 
+                              placeholder="Please list all communications with the business/scammer:&#10;• Dates and times&#10;• Method of communication (email, phone, text)&#10;• Names of people you spoke with&#10;• Summary of what was discussed&#10;• Any promises or commitments made" 
+                              style="min-height: 150px;"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="contactAttempts">Have you attempted to contact the business to resolve this? *</label>
+                    <select id="contactAttempts" name="contactAttempts" class="form-select" required>
+                        <option value="">Select response</option>
+                        <option value="yes-resolved">Yes, and they resolved the issue</option>
+                        <option value="yes-unresolved">Yes, but they did not resolve the issue</option>
+                        <option value="yes-no-response">Yes, but they did not respond</option>
+                        <option value="no-contact">No, I could not contact them</option>
+                        <option value="afraid-to-contact">No, I was afraid to contact them</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Financial Information</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="exactAmount">Exact Amount Lost (if known)</label>
+                    <input type="number" id="exactAmount" name="exactAmount" class="form-input" 
+                           placeholder="0.00" step="0.01" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="paymentDetails">Payment Method Details</label>
+                    <textarea id="paymentDetails" name="paymentDetails" class="form-textarea" 
+                              placeholder="Please provide details about how you paid:&#10;• Payment method used (credit card, bank transfer, cash, etc.)&#10;• Last 4 digits of card/account (if applicable)&#10;• Payment processor used (PayPal, Stripe, etc.)&#10;• Transaction dates and reference numbers&#10;• Any dispute actions already taken with your bank/card company"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="bankNotified" value="yes">
+                        I have notified my bank/credit card company about this fraud
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="accountCompromised" value="yes">
+                        I believe my financial accounts may be compromised
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Upload Supporting Documents</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    Upload any evidence that supports your complaint. Accepted formats: PDF, JPG, PNG, DOC, DOCX, TXT (Max 10MB per file)
+                </p>
+                
+                <div class="upload-area">
+                    <div class="upload-icon">📎</div>
+                    <h4>Upload Evidence Files</h4>
+                    <p class="upload-text">Click or drag files here to upload</p>
+                    <div class="file-list"></div>
+                </div>
+
+                <div style="margin-top: 1rem;">
+                    <h5>Helpful Evidence Types:</h5>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div>
+                            <h6 style="color: var(--primary-color); margin-bottom: 0.5rem;">Communication Evidence:</h6>
+                            <ul style="margin: 0; padding-left: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                                <li>Email conversations</li>
+                                <li>Text message screenshots</li>
+                                <li>Phone call recordings (if legal)</li>
+                                <li>Chat conversation logs</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 style="color: var(--primary-color); margin-bottom: 0.5rem;">Financial Evidence:</h6>
+                            <ul style="margin: 0; padding-left: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                                <li>Payment receipts</li>
+                                <li>Bank/credit card statements</li>
+                                <li>Transaction confirmations</li>
+                                <li>Refund denial letters</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 style="color: var(--primary-color); margin-bottom: 0.5rem;">Website/Business Evidence:</h6>
+                            <ul style="margin: 0; padding-left: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                                <li>Website screenshots</li>
+                                <li>Product advertisements</li>
+                                <li>Terms of service pages</li>
+                                <li>Business registration documents</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 style="color: var(--primary-color); margin-bottom: 0.5rem;">Legal/Official Documents:</h6>
+                            <ul style="margin: 0; padding-left: 1rem; color: var(--text-secondary); font-size: 0.9em;">
+                                <li>Police reports</li>
+                                <li>Previous complaint filings</li>
+                                <li>Legal notices received</li>
+                                <li>Identity theft reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Additional Information</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="witnessInfo">Witness Information</label>
+                    <textarea id="witnessInfo" name="witnessInfo" class="form-textarea" 
+                              placeholder="If anyone else witnessed this fraud or can provide supporting information, please provide their contact details and what they witnessed (optional)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="similarComplaints">Are you aware of others who experienced similar fraud from this business?</label>
+                    <select id="similarComplaints" name="similarComplaints" class="form-select">
+                        <option value="">Select response</option>
+                        <option value="yes-many">Yes, I know of many others</option>
+                        <option value="yes-few">Yes, I know of a few others</option>
+                        <option value="no">No, I don't know of others</option>
+                        <option value="unsure">I'm not sure</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="additionalInfo">Any other relevant information</label>
+                    <textarea id="additionalInfo" name="additionalInfo" class="form-textarea" 
+                              placeholder="Please provide any additional information that might be helpful for investigating your complaint"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="card" style="background-color: #f0fdf4; border-color: #22c55e;">
+                    <h4 style="color: #15803d; margin-bottom: 0.5rem;">✅ Evidence Tips for Success</h4>
+                    <ul style="margin: 0; padding-left: 1.5rem; color: #15803d;">
+                        <li><strong>Be thorough:</strong> More evidence leads to better outcomes</li>
+                        <li><strong>Organize chronologically:</strong> Present events in order they happened</li>
+                        <li><strong>Include context:</strong> Explain what each document shows</li>
+                        <li><strong>Redact sensitive info:</strong> Block out unnecessary personal details</li>
+                        <li><strong>Keep originals:</strong> Upload copies, keep originals safe</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" onclick="goToPreviousStep('consumer-complaints', 2)">
+                    Back
+                </button>
+                <button type="submit" class="btn btn-primary">Review Complaint</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar(2);
+            
+            // Handle desired outcome changes
+            const desiredOutcome = document.getElementById('desiredOutcome');
+            const otherOutcomeGroup = document.getElementById('otherOutcomeGroup');
+            
+            desiredOutcome.addEventListener('change', function() {
+                if (this.value === 'other') {
+                    otherOutcomeGroup.style.display = 'block';
+                } else {
+                    otherOutcomeGroup.style.display = 'none';
+                }
+            });
+            
+            // Format phone number
+            const phoneInput = document.getElementById('phone');
+            phoneInput.addEventListener('input', function() {
+                let value = this.value.replace(/\D/g, '');
+                if (value.length >= 6) {
+                    value = `(${value.substring(0, 3)}) ${value.substring(3, 6)}-${value.substring(6, 10)}`;
+                } else if (value.length >= 3) {
+                    value = `(${value.substring(0, 3)}) ${value.substring(3)}`;
+                }
+                this.value = value;
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Renewal - Step 1 | Government Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Government Services</h1>
+            <div class="accessibility-controls">
+                <button class="control-btn" id="languageBtn" aria-label="Switch Language">
+                    <span class="control-icon">🌐</span>
+                    <span class="control-text">Language</span>
+                </button>
+                <button class="control-btn" id="contrastBtn" aria-label="High Contrast Mode">
+                    <span class="control-icon">🎨</span>
+                    <span class="control-text">Contrast</span>
+                </button>
+                <button class="control-btn" id="fontSizeBtn" aria-label="Large Font Size">
+                    <span class="control-icon">🔍</span>
+                    <span class="control-text">Font Size</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="service-page">
+        <a href="javascript:goHome()" class="back-button">
+            ← Back to Home
+        </a>
+
+        <div class="page-header">
+            <h2 class="page-title">License Renewal</h2>
+            <p class="page-subtitle">Step 1 of 3: Personal Information</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-step active">1</div>
+            <div class="progress-step">2</div>
+            <div class="progress-step">3</div>
+        </div>
+
+        <form class="license-form" data-next-step="license-renewal-2">
+            <div class="form-section">
+                <h3>Current License Information</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="licenseNumber">License Number *</label>
+                    <input type="text" id="licenseNumber" name="licenseNumber" class="form-input" required 
+                           placeholder="Enter your current license number">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="expirationDate">Current Expiration Date *</label>
+                    <input type="date" id="expirationDate" name="expirationDate" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="licenseClass">License Class *</label>
+                    <select id="licenseClass" name="licenseClass" class="form-select" required>
+                        <option value="">Select license class</option>
+                        <option value="Class A">Class A - Commercial</option>
+                        <option value="Class B">Class B - Commercial</option>
+                        <option value="Class C">Class C - Regular</option>
+                        <option value="Class M">Class M - Motorcycle</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Personal Information</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" class="form-input" required 
+                           placeholder="Enter your first name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" class="form-input" required 
+                           placeholder="Enter your last name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="dateOfBirth">Date of Birth *</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="ssn">Social Security Number *</label>
+                    <input type="text" id="ssn" name="ssn" class="form-input" required 
+                           placeholder="XXX-XX-XXXX" pattern="\d{3}-\d{2}-\d{4}">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Contact Information</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-input" required 
+                           placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" required 
+                           placeholder="(XXX) XXX-XXXX">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="address">Street Address *</label>
+                    <input type="text" id="address" name="address" class="form-input" required 
+                           placeholder="Enter your street address">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="city">City *</label>
+                    <input type="text" id="city" name="city" class="form-input" required 
+                           placeholder="Enter your city">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="state">State *</label>
+                    <select id="state" name="state" class="form-select" required>
+                        <option value="">Select state</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <!-- Add more states as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="zipCode">ZIP Code *</label>
+                    <input type="text" id="zipCode" name="zipCode" class="form-input" required 
+                           placeholder="XXXXX" pattern="\d{5}">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Additional Information</h3>
+                
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="organDonor" value="yes">
+                        I would like to be an organ donor
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="voterRegistration" value="yes">
+                        I would like to register to vote
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="specialNeeds">Special Accommodations</label>
+                    <textarea id="specialNeeds" name="specialNeeds" class="form-textarea" 
+                              placeholder="Please describe any special accommodations needed (optional)"></textarea>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" onclick="goHome()">Cancel</button>
+                <button type="submit" class="btn btn-primary">Continue to Payment</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Government Services Portal. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize progress bar for current step
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar(1);
+        });
+    </script>
+</body>
+</html> 
